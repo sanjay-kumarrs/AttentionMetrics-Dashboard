@@ -8,9 +8,9 @@ services:
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: "3.10"
+        value: "3.11"
       - key: CORS_ORIGINS
-        sync: false
+        value: https://attention-metrics-web.onrender.com
 
   - type: web
     name: attention-metrics-web
@@ -23,4 +23,4 @@ services:
       - key: NODE_VERSION
         value: "20"
       - key: NEXT_PUBLIC_API_URL
-        sync: false
+        value: https://attention-metrics-api.onrender.com
